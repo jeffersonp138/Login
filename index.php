@@ -42,24 +42,16 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form action="" method="post">
         <h1>Acesse sua conta</h1>
-        <p>
-            <label for="email">E-mail</label>
-            <input type="text" name="email" id="email">
-
-        </p>
-
-        <p>
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha">
-        </p>
-
-        <p>
-            <button type="submit">Entrar</button>
-        </p>
+        <input type="text" name="email" id="email" placeholder="Seu e-mail">
+        <input type="password" name="senha" id="senha" placeholder="Senha">
+        <input type="submit" value="Entrar">
+        <a href="cadastro.php">Faça seu <strong>CADASTRO!</strong></a>
+   
     </form>
 </body>
 </html>
