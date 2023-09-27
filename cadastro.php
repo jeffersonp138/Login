@@ -7,6 +7,8 @@ $email = $mysqli->real_escape_string($_POST['email']);
 $senha = $mysqli ->real_escape_string($_POST['senha']);
 $senha2 = $mysqli ->real_escape_string($_POST['senha2']);
 
+$senha_cripto = password_hash($senha, PASSWORD_BCRYPT, ['cost' => 12]);
+
 
     if(strlen($_POST['nome'])== 0){
         echo alerta("Preencha seu nome");
@@ -27,7 +29,7 @@ $senha2 = $mysqli ->real_escape_string($_POST['senha2']);
     
 else{
 
-    $sql_insert= "INSERT INTO  usuarios (nome, email, senha) VALUES ('$nome','$email','$senha')";
+    $sql_insert= "INSERT INTO  usuarios (nome, email, senha) VALUES ('$nome','$email','$senha_cripto')";
     $sql_query = $mysqli->query($sql_insert) or die("Falha ao cadastrar:" . $mysqli->error);
 
     
