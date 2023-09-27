@@ -45,7 +45,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" method="post">
+    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
         <h1>Acesse sua conta</h1>
         <input type="text" name="email" id="email" placeholder="Seu e-mail">
         <input type="password" name="senha" id="senha" placeholder="Senha">
