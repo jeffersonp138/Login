@@ -10,7 +10,7 @@ include('protect.php');
     <title>Painel</title>
 </head>
 <body>
-    <h1>Bem vindo ao Painel, <?php echo $_SESSION['nome']?>.</h1>
+    <h1>Bem-vindo ao Painel, <?php echo htmlspecialchars($_SESSION['nome'], ENT_QUOTES, 'UTF-8'); ?>.</h1>
     
     <p>
         <a href="logout.php">Sair</a>
