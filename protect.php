@@ -1,11 +1,8 @@
-<?php 
-if(!isset($_SESSION)){
-    session_start();
+<?php
+session_start();
+
+if (!isset($_SESSION['id'])) {
+    header("Location: index.php");
+    exit();
 }
-
-if(!isset($_SESSION['id'])){
-    die("<p>Faça o <a href=\"index.php\">Login</a></p>");
-}
-
-
 ?>
